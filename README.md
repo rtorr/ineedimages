@@ -1,7 +1,7 @@
 # ineedimages
 
 <h1 align="center">
-  <img src="https://github.com/rtorr/ineedimages/raw/master/other/example.png" alt="ineedimages" title="ineedimages" width="200">
+  <img src="https://github.com/rtorr/ineedimages/raw/master/other/example.png" alt="ineedimages" title="ineedimages" width="500">
   <br>
   ineedimages 🌌
   <br>
