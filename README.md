@@ -7,5 +7,11 @@ npm install -g ineedimages
 ```
 
 ```bash
-cross-env API_KEY=<getty api key> PHRASE=cats SIZE=500x500 ineedimages > data.json
+ineedimages <key> <phrase> <size>
+```
+
+example:
+
+```bash
+ineedimages yourgettyapikey cats 500x500 > data.json
 ```
