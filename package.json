@@ -1,11 +1,12 @@
 {
   "name": "ineedimages",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "license": "MIT",
   "bin": {
     "ineedimages": "index.js"
   },
+  "files": ["index.js"],
   "dependencies": {
     "node-fetch": "^1.7.3",
     "sade": "^1.3.1"
