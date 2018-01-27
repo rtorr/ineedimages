@@ -45,13 +45,9 @@ function getImage(id) {
 }
 
 async function getImages(options) {
-  try {
-    return Promise.all(
-      [1, 2, 3, 4, 5].map(n => fetchJson(searchImagesUrl(n, options.phrase), options))
-    );
-  } catch (e) {
-    return new Error("Your API key probably doesn't work");
-  }
+  return Promise.all(
+    [1, 2, 3, 4, 5].map(n => fetchJson(searchImagesUrl(n, options.phrase), options))
+  );
 }
 
 async function doStuff(options) {
