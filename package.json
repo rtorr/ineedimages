@@ -1,0 +1,19 @@
+{
+  "name": "ineedimages",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "ineedimages": "index.js"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "node-fetch": "^1.7.3"
+  },
+  "engines": { "node": ">=8.9.4" },
+  "author": {
+    "name": "Richard Torruellas",
+    "email": "rtorruellas@gmail.com",
+    "url": "http://rtorr.com"
+  }
+}
