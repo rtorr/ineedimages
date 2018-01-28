@@ -2,7 +2,7 @@
 const sade = require('sade');
 const fetch = require('node-fetch');
 const { URL } = require('url');
-const version = require('./package');
+const { version } = require('./package');
 
 const prog = sade('ineedimages').version(version);
 const apiUrl = 'https://api.gettyimages.com/v3';
