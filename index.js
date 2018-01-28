@@ -60,7 +60,8 @@ prog
   .describe('Return images from getty')
   .action((key, phrase, size) => {
     if (!key) {
-      console.error('You need to process.env.GETTY_API_KEY to a getty image API token');
+      console.error('You need to provide a getty image API token');
+      console.log('Usage: ineedimages <key> <phrase> <size>');
       process.exit(1);
     }
     const _size = size ? size : '100x100';
