@@ -10,7 +10,7 @@ const apiUrl = 'https://api.gettyimages.com/v3';
 const ourJason = data => JSON.stringify({ data }, null, ' ');
 const imageUrl = id => `${apiUrl}/images/${id}`;
 const searchImagesUrl = (page, phrase) =>
-  `${apiUrl}/search/images?fields=summary_set&minimum_size=large&page=${page}&page_size=100&sort_order=best_match&phrase=${phrase}`;
+  `${apiUrl}/search/images?phrase=${phrase}&page=${page}&page_size=100`;
 
 const concat = (a, item) => {
   return a.concat(item.images);
@@ -19,8 +19,11 @@ const concat = (a, item) => {
 const makeUrl = size => image => {
   try {
     const newImageUrl = new URL(image.display_sizes[0].uri);
-    newImageUrl.searchParams.set('s', size);
-    return newImageUrl.href;
+    newImageUrl.searchParams.set('maxwidth', size.split('x')[0]);
+    newImageUrl.searchParams.set('maxheight', size.split('x')[1]);
+    return `${newImageUrl.origin}${newImageUrl.pathname}?maxwidth=${newImageUrl.searchParams.get(
+      'maxwidth'
+    )}&maxheight=${newImageUrl.searchParams.get('maxheight')}`;
   } catch (e) {
     console.error("Your API key probably doesn't work");
     process.exit(1);
